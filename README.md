@@ -2,6 +2,5 @@
 
 ## 📌Overview
 
-Simple project aiming event driven architecture using broker topology.
-
+Simple project demonstrating event driven architecture using broker topology.
 ___
