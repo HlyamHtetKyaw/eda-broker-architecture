@@ -2,7 +2,7 @@
 
 ## 📌Overview
 
-Simple project demonstrating event driven architecture using broker topology using pure Java.
+Simple project demonstrating event driven architecture using broker topology with pure Java.
 ___
 
 ## 📁 Project Structure
