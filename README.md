@@ -11,8 +11,7 @@ ___
 src/main/java/com/square/
 ├── brokers            # Event bus, event publishing & subscriing logic
 ├── events             # Event definition and implementations
-├── listeners          # Events listeners (subscribers)
-├── services           # Business logic or domain services
+├── services           # Business logic or domain services and listener implementations
 ├── Main.java          # Entry point for initializing and testing
 ```
 
