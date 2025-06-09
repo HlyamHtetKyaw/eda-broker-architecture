@@ -1,18 +1,20 @@
+# HELP.md (if you want to ignore it)
 HELP.md
-<<<<<<< HEAD
+
+# Gradle
 .gradle
 build/
 !gradle/wrapper/gradle-wrapper.jar
 !**/src/main/**/build/
 !**/src/test/**/build/
-=======
+
+# Maven
 target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
->>>>>>> 87c4bf5f79a9b09637d97ee8b11b95fe8883b739
 
-### STS ###
+# STS
 .apt_generated
 .classpath
 .factorypath
@@ -20,37 +22,25 @@ target/
 .settings
 .springBeans
 .sts4-cache
-<<<<<<< HEAD
 bin/
 !**/src/main/**/bin/
 !**/src/test/**/bin/
-=======
->>>>>>> 87c4bf5f79a9b09637d97ee8b11b95fe8883b739
 
-### IntelliJ IDEA ###
+# IntelliJ IDEA
 .idea
 *.iws
 *.iml
 *.ipr
-<<<<<<< HEAD
 out/
 !**/src/main/**/out/
 !**/src/test/**/out/
-=======
->>>>>>> 87c4bf5f79a9b09637d97ee8b11b95fe8883b739
 
-### NetBeans ###
+# NetBeans
 /nbproject/private/
 /nbbuild/
 /dist/
 /nbdist/
 /.nb-gradle/
-<<<<<<< HEAD
-=======
-build/
-!**/src/main/**/build/
-!**/src/test/**/build/
->>>>>>> 87c4bf5f79a9b09637d97ee8b11b95fe8883b739
 
-### VS Code ###
+# VS Code
 .vscode/
