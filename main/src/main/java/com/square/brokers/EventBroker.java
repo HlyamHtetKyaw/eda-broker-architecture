@@ -1,7 +1,10 @@
 package com.square.brokers;
 
-import com.square.listeners.EventListener;
+import com.square.events.impl.PaymentAppliedEvent;
+import com.square.events.impl.PaymentDeniedEvent;
+import com.square.services.EventListener;
 import com.square.events.Event;
+
 import java.util.*;
 
 public class EventBroker {

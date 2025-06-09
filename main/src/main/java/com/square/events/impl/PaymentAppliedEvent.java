@@ -2,9 +2,9 @@ package com.square.events.impl;
 
 import com.square.events.Event;
 
-public class InventoryUpdatedEvent implements Event {
+public class PaymentAppliedEvent implements Event {
     public final Long productId;
-    public InventoryUpdatedEvent(Long productId){
+    public PaymentAppliedEvent(Long productId){
         this.productId = productId;
     }
 }
