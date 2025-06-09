@@ -10,7 +10,7 @@ import java.util.*;
 public class EventBroker {
     private final Map<Class<? extends Event>, List<EventListener<? extends Event>>> listeners = new HashMap<>();
 
-    public <T extends Event> void subscribe(Class<T> eventType,EventListener<T> listener){
+    public <T extends Event> void subscribe(Class<T> eventType,EventListener<? super T> listener){
         listeners.computeIfAbsent(eventType,k -> new ArrayList<>()).add(listener);
     }
 

@@ -1,10 +1,15 @@
 package com.square.services.impl;
 
+import com.square.brokers.EventBroker;
 import com.square.events.Event;
 import com.square.events.impl.*;
 import com.square.services.EventListener;
 
 public class NotificationService implements EventListener<Event> {
+    private EventBroker broker;
+    public NotificationService(EventBroker broker){
+        this.broker = broker;
+    }
     @Override
     public void onEvent(Event event) {
         switch (event){
@@ -15,5 +20,6 @@ public class NotificationService implements EventListener<Event> {
             case OrderShippedEvent e-> System.out.println("**Notify** Your order no. "+e.productId+" is shipped");
             default -> System.out.println("Unhandled event");
         }
+        broker.publish(new EmailSentEvent("alice@gmail.com"));
     }
 }
