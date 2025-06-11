@@ -47,13 +47,12 @@ This project follows the **Broker Topology** pattern, as inspired by the _Softwa
 
 1. **Clone the project**
    ```bash
-   git clone https://github.com/your-repo/eda-broker-architecture.git
+   git clone https://github.com/HlyamHtetKyaw/eda-broker-architecture.git
    cd eda-broker-architecture
 
 2. **Run the project**
  - Ensure you have Java 21 installed.
  - Compile and run using:
-Compile and run using:
    ```bash
    javac src/main/java/com/square/Main.java
    java -cp src/main/java com.square.Main
