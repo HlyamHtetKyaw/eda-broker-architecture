@@ -15,7 +15,7 @@ public class PaymentService implements EventListener<OrderCreatedEvent> {
     @Override
     public void onEvent(OrderCreatedEvent event) {
         System.out.println("Processing payment for order " + event.orderId);
-        boolean success = false;
+        boolean success = true;
         if(success){
             broker.publish(new PaymentAppliedEvent(event.orderId));
         }else{

@@ -25,6 +25,5 @@ public class Main {
 
         broker.publish(new PlaceOrderEvent(null));
         broker.publish(new PlaceOrderEvent("Software architecture"));
-        broker.publish(new OrderCreatedEvent(220L,"fix"));
     }
 }
