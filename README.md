@@ -59,6 +59,8 @@ This project follows the **Broker Topology** pattern, as inspired by the _Softwa
 
 ## 🧪 Example Usage
    ```
-   broker.publish(new PlaceOrderEvent(null, "John")); // Fails validation
-   broker.publish(new PlaceOrderEvent("Book Title", "John")); // Resumes processing
+   PlaceOrderEvent orderPlacedEvent = new PlaceOrderEvent(null,1L);
+   broker.publish(orderPlacedEvent); // Fails validation
+   orderPlacedEvent.setBookTitle("Software Architecture");
+   broker.publish(orderPlacedEvent); // Resumes processing
    ```

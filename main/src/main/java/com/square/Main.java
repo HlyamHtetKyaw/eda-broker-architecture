@@ -13,7 +13,7 @@ public class Main {
         EventBroker broker = new EventBroker(processor);
         processor.setBroker(broker);
         broker.subscribe(PlaceOrderEvent.class,new OrderPlacementService(broker));
-        broker.subscribe(OrderCreatedEvent.class,new NotificationService(broker));
+//        broker.subscribe(OrderCreatedEvent.class,new NotificationService(broker));
         broker.subscribe(OrderCreatedEvent.class, new PaymentService(broker));
         broker.subscribe(PaymentAppliedEvent.class,new OrderFulfillmentService(broker));
         broker.subscribe(PaymentDeniedEvent.class,new NotificationService(broker));
@@ -22,8 +22,9 @@ public class Main {
         broker.subscribe(OrderCreatedEvent.class,new InventoryService(broker));
         broker.subscribe(InventoryUpdatedEvent.class,new WarehouseService(broker));
         broker.subscribe(OrderShippedEvent.class,new NotificationService(broker));
-
-        broker.publish(new PlaceOrderEvent(null,1L));
-        broker.publish(new PlaceOrderEvent("Software architecture",1L));
+        PlaceOrderEvent orderPlacedEvent = new PlaceOrderEvent(null,1L);
+        broker.publish(orderPlacedEvent);
+        orderPlacedEvent.setBookTitle("Software Architecture");
+        broker.publish(orderPlacedEvent);
     }
 }

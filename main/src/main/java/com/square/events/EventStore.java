@@ -16,7 +16,6 @@ public class EventStore {
     }
 
     public void clearFailed(ValidatableEvent event){
-        System.out.println("Removed state id: "+getEventId(event));
         failedState.remove(getEventId(event));
     }
 
@@ -30,7 +29,7 @@ public class EventStore {
                 return e.orderId;
             }
             case PlaceOrderEvent e-> {
-                return e.orderId;
+                return e.getOrderId();
             }
             default -> {return null;}
         }

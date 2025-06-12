@@ -12,7 +12,7 @@ public class OrderPlacementService implements EventListener<PlaceOrderEvent> {
     }
     @Override
     public void onEvent(PlaceOrderEvent event) {
-        System.out.println("Order placed for "+event.bookTitle);
-        broker.publish(new OrderCreatedEvent(220L,event.bookTitle));
+        System.out.println("Order placed for "+event.getBookTitle());
+        broker.publish(new OrderCreatedEvent(event.getOrderId(),event.getBookTitle()));
     }
 }
