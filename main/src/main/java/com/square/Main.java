@@ -23,7 +23,7 @@ public class Main {
         broker.subscribe(InventoryUpdatedEvent.class,new WarehouseService(broker));
         broker.subscribe(OrderShippedEvent.class,new NotificationService(broker));
 
-        broker.publish(new PlaceOrderEvent(null));
-        broker.publish(new PlaceOrderEvent("Software architecture"));
+        broker.publish(new PlaceOrderEvent(null,1L));
+        broker.publish(new PlaceOrderEvent("Software architecture",1L));
     }
 }
